@@ -20,7 +20,7 @@ function getUserCity() {
 
 function getLocation(city) {
   return (
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=886b4d9fa52f373586e1ac5a100c5cf1`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=886b4d9fa52f373586e1ac5a100c5cf1`)
       .then(response => response.json())
       .then(json => {
         const locations = json;
