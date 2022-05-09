@@ -2,7 +2,7 @@
 
 ## Project Description
 
-this.sky is an elegantly simple weather app. It displays the current weather in any chosen location around the world, using data fetched from the OpenWeather API.
+[this.sky](https://catehardy.github.io/this.sky/) is an elegantly simple weather app. It displays the current weather in any chosen location around the world, using data fetched from the OpenWeather API.
 
 It’s currently a WIP and when finished will feature a dynamically changing background, to represent the current weather forecast.
 
