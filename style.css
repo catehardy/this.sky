@@ -1,11 +1,14 @@
 body {
 	font-family: 'Quicksand', sans-serif;
 	background-image: url("./images/weather.jpg");
-	 background-size: cover;
+	background-size: cover;
+	text-align: center;
+	color: #276ab3;
 }
 
-h1 {
-	color: #276ab3;
+.title {
+	padding-bottom: 6px;
+	font-size: 3em;
 }
 
 .grid-container {
@@ -18,4 +21,9 @@ h1 {
 	background-color: #FFF;
 	padding: 15px 15px 45px;
 	align-self: center;
+	border-radius: 6px;
+}
+
+#forecast-search {
+	padding-bottom: 30px;
 }
