@@ -1,7 +1,21 @@
 body {
 	font-family: 'Quicksand', sans-serif;
+	background-image: url("./images/weather.jpg");
+	 background-size: cover;
 }
 
 h1 {
 	color: #276ab3;
+}
+
+.grid-container {
+	display: grid;
+	justify-content: center;
+	height: 100vh;
+}
+
+.grid-item {
+	background-color: #FFF;
+	padding: 15px 15px 45px;
+	align-self: center;
 }
