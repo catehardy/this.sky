@@ -1,17 +1,19 @@
 // TO DO:
-// Find an international weather API - DONE
-// Read documentation and create API call - DONE
-// Add basic forecast to index.html - DONE
-// Figure out how to select a forecast by location (read https://openweathermap.org/api/geocoding-api) - DONE
-// Create a form for user to select their chosen location's forecast - DONE
-// Clear both input value and previous forecast, after forecast displays - DONE
-// Figure out how to let user see and choose options for their city (e.g. which 'London' do they mean)?
-// Display error if user doesn't enter a valid location
-// Allow user to press "enter" to submit city as well as clicking submit button
-// Allow user to choose between imperial and metric temp/wind speed
-// Use flexbox and CSS to improve page layout
+// Visuals:
 // Add dynamic page background, selected by keywords in shortForecast
 // (is there a way to get a list of all possible responses to forecast.weather[0].description?)
+// Style combobox with CSS, once built
+
+// User entry:
+// Create a combobox for users to select their location more precisely
+// Display error if user doesn't enter a valid location
+// Keyboard entry as well as mouse click to select
+// Allow user to choose between imperial and metric temp/wind speed
+
+// Extra info to display:
+// Display forecast as well as current weather
+// Current time in this location?
+// 'Random location' button?
 
 function getUserCity() {
   const inputVal = document.getElementById("user-location").value;
