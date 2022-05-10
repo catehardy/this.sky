@@ -72,9 +72,11 @@ function main() {
 
         const myDiv = document.querySelector('#api-spot')
 
+        const horizontalRule = document.createElement("hr")
+
         const inputVal = document.getElementById("user-location").value;
         const header = document.createElement("h2")
-        header.innerText = `Current weather in ${inputVal}:`
+        header.innerText = `Current weather in ${inputVal}`
 
         const newForecast = document.createElement("p")
         newForecast.innerText = `Quick description: ${shortForecast}`
@@ -88,6 +90,7 @@ function main() {
         const newWindSpeed = document.createElement("p")
         newWindSpeed.innerText = `Current windspeed: ${currentWindSpeed} km/h`
 
+        myDiv.appendChild(horizontalRule)
         myDiv.appendChild(header)
         myDiv.appendChild(newForecast)
         myDiv.appendChild(newTemp)
