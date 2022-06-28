@@ -12,7 +12,6 @@
 
 // Extra info to display:
 // Display 24hr or week ahead forecast as well as current weather
-// Current time in this location
 
 
 function getUserCity() {
@@ -100,7 +99,6 @@ function main() {
 
         // TODO:
         // Replace deprecated .substr() method
-        // Create an element and append to myDiv to display the current time in searched city
         // Should this become a separate function, called from main?
         // ---------------------------------
 
