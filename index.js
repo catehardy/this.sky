@@ -85,24 +85,20 @@ function main() {
 
         // ---------------------------------
         // Get local time for searched city
-        const date = new Date().getTime(); // Expected: timestamp for UTC (but poss gives timestamp for local user?)
-        const localTimeDifference = (forecast.timezone * 1000); // Convert from seconds to milliseconds
-        const localTime = new Date(date + localTimeDifference); // New timestamp: UTC +/- local diff for searched city
+        const userDate = new Date(); // UTC, to get offset for local user
+        const userOffset = userDate.getTimezoneOffset()*60*1000; // user's offset time in milliseconds
 
-        console.log("Date: ", date);
-        console.log("time diff: ", localTimeDifference);
-        console.log("local time: ", localTime);
+        const date = new Date().getTime() // UTC
+        const localTimeDifference = (forecast.timezone * 1000); // Searched city's offset time in milliseconds
+        const localTime = new Date(date + localTimeDifference + userOffset); // New timestamp: UTC +/- local offset for searched city +/- user offset
 
-        let hours = localTime.getHours();
-        let minutes = "0" + localTime.getMinutes();
-        const seconds = "0" + localTime.getSeconds();
+        const hours = localTime.getHours();
+        const minutes = "0" + localTime.getMinutes();
 
-        const formattedTime = `Time: ${hours}:${minutes.substr(-2)}:${seconds.substr(-2)}`;
+        const formattedTime = `${hours}:${minutes.substr(-2)}`;
         console.log(formattedTime);
 
         // TODO:
-        // It looks like the hours, mins and seconds are being adjusted to BST by an hour - fix this!
-        // Read this for help: https://www.toptal.com/software/definitive-guide-to-datetime-manipulation
         // Replace deprecated .substr() method
         // Create an element and append to myDiv to display the current time in searched city
         // Should this become a separate function, called from main?
@@ -129,12 +125,16 @@ function main() {
         const newWindSpeed = document.createElement("p")
         newWindSpeed.innerText = `Current windspeed: ${currentWindSpeed} km/h`
 
+        const newCityTime = document.createElement("p")
+        newCityTime.innerText = `Current time in ${inputVal}: ${formattedTime}`
+
         myDiv.appendChild(horizontalRule)
         myDiv.appendChild(header)
         myDiv.appendChild(newForecast)
         myDiv.appendChild(newTemp)
         myDiv.appendChild(newFeelsLike)
         myDiv.appendChild(newWindSpeed)
+        myDiv.appendChild(newCityTime)
 
         // Clear search form
         document.getElementById("forecast-search").reset();
