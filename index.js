@@ -1,19 +1,3 @@
-// TO DO:
-
-// User entry:
-// Create a combobox for users to select their location more precisely
-// Display error if user doesn't enter a valid location
-// Allow user to choose between imperial and metric temp/wind speed
-
-// Visuals:
-// Add dynamic page background, selected by keywords in shortForecast
-  // (is there a way to get a list of all possible responses to forecast.weather[0].description?)
-// Style combobox with CSS, once built
-
-// Extra info to display:
-// Display 24hr or week ahead forecast as well as current weather
-
-
 function getUserCity() {
   const inputVal = document.getElementById("user-location").value;
   return getLocation(inputVal);
@@ -95,7 +79,6 @@ function main() {
         const minutes = "0" + localTime.getMinutes();
 
         const formattedTime = `${hours}:${minutes.substr(-2)}`;
-        console.log(formattedTime);
 
         // TODO:
         // Replace deprecated .substr() method
